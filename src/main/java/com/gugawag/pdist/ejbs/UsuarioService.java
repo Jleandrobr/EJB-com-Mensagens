@@ -23,11 +23,11 @@ public class UsuarioService {
     }
 
     public void inserir(long id, String nome) {
-        Usuario novoUsuario = new Usuario(id, nome);
-        usuarioDao.inserir(novoUsuario);
+        Usuario novoUsuario = new Usuario(id, nome); 
+        usuarioDao.inserir(novoUsuario);  
 
-        Mensagem mensagem = new Mensagem();
-//        mensagemDao.inserir(mensagem);
+        // Mensagem mensagem = new Mensagem();
+        // mensagemDao.inserir(mensagem);
         if (id==3L) {
             throw new RuntimeException("Menor de idade não permitido!");
         }
